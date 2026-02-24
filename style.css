@@ -34,6 +34,10 @@ body{
     z-index:1000;
 }
 
+.navlinks{
+    margin-right:40px;   /* increase to move more left */
+}
+
 .logo{
     font-size:24px;
     font-weight:bold;
