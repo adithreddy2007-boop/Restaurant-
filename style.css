@@ -1,0 +1,514 @@
+/* ========= GOOGLE FONTS ========= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap');
+
+/* ========= GLOBAL ========= */
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#efe6dc;
+}
+
+/* ========= TOP BAR ========= */
+.topbar{
+    background:#e55b2d;
+    color:white;
+    padding:8px;
+    font-size:14px;
+    display:flex;
+    justify-content:space-around;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+}
+
+/* ========= NAVBAR ========= */
+.navbar{
+    position:fixed;
+    top:40px;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:10px 20px;
+    color:white;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.navlinks a{
+    margin:0 15px;
+    color:white;
+    text-decoration:none;
+}
+
+/* ========= HERO ========= */
+.hero{
+    height:100vh;
+    background:url("image/bg.jpeg") center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+.heroContent{
+    position:relative;
+    z-index:1;
+}
+
+.heroContent h1{
+    font-family:'Playfair Display', serif;
+    font-size:70px;
+    font-weight:700; 
+}
+
+.heroContent p{
+    font-size:22px;
+    letter-spacing:2px;
+}
+
+.line{
+    width:200px;
+    height:2px;
+    background:white;
+    margin:20px auto;
+}
+
+/* ========= ABOUT PAGE ========= */
+.about-hero{
+    height:40vh;
+    background:#7a7471;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+.about-hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:48px;
+}
+
+.about-box{
+    max-width:700px;
+    margin:-60px auto 40px auto;
+    background:#faf9f8;   /* card colour */
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+.about-text{
+    font-size:19px;
+    line-height:1.9;
+    color:#444;
+    margin-bottom:35px;
+}
+
+.features{
+    display:flex;
+    flex-direction:center;     /* display horizontally */
+    gap:15px;              /* space between boxes */
+    margin-top:25px;
+    justify-content:center; /* center the boxes */
+    flex-wrap:wrap;        /* wrap if needed on mobile */
+}
+
+.feature{
+    background:#d6e0dc;
+    padding:14px 22px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    color:#2f4f46;
+    text-align:center;
+    flex:1;
+    min-width:120px;
+    box-shadow:0 2px 4px rgba(0,0,0,0.05);
+}
+
+.button-group{
+    text-align:center;
+    margin-top:20px;
+}
+
+.green-btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:10px 20px;   /* back to home button size */
+    background:#1f7a4d;
+    color:white;
+    font-weight:600;
+    font-size:14px;      /* font size */
+    border-radius:6px;   /* reduced from 30px */
+    transition:0.3s;
+}
+
+.green-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(31,122,77,0.3);
+}
+
+/* ================= MENU ================= */
+
+.menuWrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:40px;
+}
+
+h2{
+    text-align:center;
+    color:#1f4d3a;
+    font-size:50px;
+    margin:0 0 18px;
+    font-family:'Playfair Display', serif;
+    font-weight:700; 
+}
+
+.menuWrapper > div:nth-child(2) h2{
+    margin-top:90px;
+}
+
+.menuCard{
+    background:#f4f4f4;
+    width:760px;
+    padding:55px 70px;
+    border-radius:22px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.18);
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 0;
+    border-bottom:1px dotted #bfbfbf;
+}
+
+.row:last-child{
+    border-bottom:none;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+}
+
+.left img{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    margin-right:16px;
+}
+
+.left span{
+    display:flex;
+    flex-direction:column;
+    font-size:20px;
+    font-weight:500;
+    color:#222;
+}
+
+.desc{
+    font-size:15px;
+    color:#6b6b6b;
+    margin-top:6px;
+}
+
+.row span:last-child{
+    font-size:20px;
+    font-weight:600;
+    color:#222;
+}
+
+/* ========= BUTTONS ========= */
+
+.menu-buttons{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin:40px 0 60px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:12px 30px;   /* reduced from 18px 45px */
+    font-size:15px;      /* reduced from 18px */
+    font-weight:600;
+    color:white;
+    background:linear-gradient(135deg,#f64b17,#c20303);
+    border-radius:40px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.25);
+    transition:0.3s ease;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 28px rgba(0,0,0,0.35);
+}
+
+/* ========= BOOKING ========= */
+
+.booking-body{
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("image/bg3.jpeg") center/cover no-repeat;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    padding-top:40px;   /* reduced space above box */
+}
+
+.booking-card{
+    background:#6B4F3A;
+    padding:55px 45px;
+    border-radius:20px;
+    width:360px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.35);
+    text-align:center;
+    margin:auto;
+}
+
+.booking-card h2{
+    font-size:30px;
+    color:#E6D2A8;
+    margin-bottom:30px;   /* extra space between title and inputs */
+    font-family:'Playfair Display', serif;
+}
+
+.booking-card input,
+.booking-card select,
+.booking-card textarea{
+    width:100%;
+    padding:13px;           /* bigger inside area */
+    font-size:15px;         /* larger text for user data */
+    margin-bottom:23px;     /* more space between each field */
+    border-radius:8px;
+    border:1px solid #ccc;
+    transform: translateX(-14px); /* left or right horizontal shift */
+}
+
+.booking-card button{
+    width:100%;
+    padding:10px;        /* reduced from 14px */
+    margin-top:15px;
+    border:none;
+    border-radius:30px;
+    font-size:14px;      /* reduced from 16px */
+    font-weight:600;
+    color:white;
+    background:#1f7a4d;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.booking-card button:hover{
+    transform:translateY(-2px);
+}
+/* BACK TO HOME TEXT */
+.back-home{
+    margin-top:24px;   /* more space below confirm button */
+    margin-bottom:0;   /* ensure no extra space below */
+    text-align:center;
+}
+
+.back-home a{
+    text-decoration:none;
+    color:#E6D2A8;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.back-home a:hover{
+    color:white;
+}
+
+/* ========= CONFIRM PAGE ========= */
+
+.confirm-body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#e6f4ea,#d4efe1);
+    font-family:Georgia, serif;
+}
+
+.confirm-box{
+    background:white;
+    padding:50px 60px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    animation:pop 0.6s ease;
+    max-width:420px;
+}
+
+.icon{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.confirm-box h1{
+    margin:10px 0;
+    color:#1f4d3a;
+    font-size:34px;
+}
+
+.confirm-box p{
+    color:#555;
+    font-size:17px;
+    margin-bottom:30px;
+    line-height:1.5;
+}
+
+.confirm-box a{
+    display:inline-block;
+    padding:12px 28px;
+    background:linear-gradient(135deg,#1f4d3a,#2f7b5b);
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.confirm-box a:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+} 
+
+/* ========= CONTACT PAGE ========= */
+
+.contact-container{
+    max-width:700px;
+    margin:120px auto;
+    padding:20px;
+}
+
+.contact-container h1{
+    font-family:'Playfair Display', serif;
+    font-size:42px;
+    color:#1f4d3a;
+    margin-bottom:10px;
+}
+
+.contact-intro{
+    font-size:18px;
+    margin-bottom:30px;
+    color:#444;
+}
+
+.contact-box{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    line-height:1.7;
+}
+
+.contact-box h3{
+    margin-top:15px;
+    color:#1f4d3a;
+}
+
+.contact-back{
+    display:inline-block;
+    margin-top:25px;
+    text-decoration:none;
+    color:#1f7a4d;
+    font-weight:600;
+}
+/* ========= CONTACT SPLIT CARD ========= */
+
+.contact-body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(120deg,#d9a7c7,#fffcdc);
+}
+
+/* main card */
+.contact-card{
+    display:flex;
+    width:720px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+    background:white;
+}
+
+/* left section */
+.contact-left{
+    width:45%;
+    background:linear-gradient(135deg,#8a4b08,#c47a3a);
+    color:white;
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.contact-left h1{
+    font-family:'Playfair Display', serif;
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.contact-left p{
+    line-height:1.6;
+}
+
+/* right section */
+.contact-right{
+    width:55%;
+    padding:35px 40px;
+    background:#f3efec;
+}
+
+.contact-right h3{
+    margin-top:15px;
+    color:#333;
+}
+
+.contact-right p{
+    margin:5px 0 10px;
+    color:#444;
+}
+
+/* button */
+.contact-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 24px;
+    background:#8a4b08;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.contact-btn:hover{
+    background:#6d3a05;
+}
