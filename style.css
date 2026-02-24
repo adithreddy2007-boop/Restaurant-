@@ -35,7 +35,9 @@ body{
 }
 
 .navlinks{
-    margin-right:30px;   /* increase to move more left */
+    display:flex;
+    gap:30px;
+    margin-right:40px;
 }
 
 .logo{
