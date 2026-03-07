@@ -1,180 +1,193 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Menu</title>
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html> <!-- Tells the browser this is an HTML5 document — always the first line -->
+<html> <!-- Opens the root HTML element that wraps the entire page -->
+<head> <!-- Opens the head section — contains setup info, not visible on the page -->
+<title>Menu</title> <!-- Sets the text shown on the browser tab -->
+<link rel="stylesheet" href="style.css"> <!-- Links your CSS file so the page uses your styles -->
 
-<!-- Google Font for elegant heading -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-</head>
+<!-- Google Font for elegant heading --> <!-- A comment explaining why the next line exists -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet"> <!-- Loads Playfair Display and Poppins fonts from Google Fonts -->
+</head> <!-- Closes the head section -->
 
-<body>
+<body> <!-- Opens the body section — everything visible on the page goes here -->
 
-<div class="menuWrapper">
+<div class="menuWrapper"> <!-- The outer wrapper that centres and stacks both menu sections vertically -->
 
-<!-- LUNCH MENU -->
-<div>
-<h2>Lunch Menu</h2>
+<!-- LUNCH MENU --> <!-- A comment to mark the start of the Lunch Menu section -->
+<div> <!-- A plain div that wraps the entire Lunch Menu section -->
+<h2>Lunch Menu</h2> <!-- The heading displayed above the lunch menu card -->
 
-<div class="menuCard">
+<div class="menuCard"> <!-- The grey rounded card that contains all lunch menu items -->
 
-<div class="row">
-  <div class="left">
-    <img src="image/thali.jpeg">
-    <div>
-      Veg Thali
-      <div class="desc">Complete meal with rice, roti, curry & dal.</div>
-    </div>
-  </div>
-  <span>₹120</span>
-</div>
+<!-- LUNCH ITEM 1: Veg Thali -->
+<div class="row"> <!-- A row that holds one menu item — image on the left, price on the right -->
+  <div class="left"> <!-- Groups the food image and text together on the left side -->
+    <img src="image/thali.jpeg"> <!-- The circular food image for Veg Thali -->
+    <div> <!-- A div that wraps the item name and description text -->
+      Veg Thali <!-- The name of the menu item -->
+      <div class="desc">Complete meal with rice, roti, curry & dal.</div> <!-- Short description of the item -->
+    </div> <!-- Closes the name/description wrapper div -->
+  </div> <!-- Closes the left div -->
+  <span>₹120</span> <!-- The price shown on the right side of the row -->
+</div> <!-- Closes the row div -->
 
-<div class="row">
-  <div class="left">
-    <img src="image/panner.jpeg">
-    <div>
-      Paneer Curry
-      <div class="desc">Soft paneer cooked in rich Indian gravy.</div>
-    </div>
-  </div>
-  <span>₹140</span>
-</div>
+<!-- LUNCH ITEM 2: Paneer Curry -->
+<div class="row"> <!-- A row for the Paneer Curry menu item -->
+  <div class="left"> <!-- Groups the image and text on the left -->
+    <img src="image/panner.jpeg"> <!-- The circular food image for Paneer Curry -->
+    <div> <!-- Wraps the item name and description -->
+      Paneer Curry <!-- The name of the menu item -->
+      <div class="desc">Soft paneer cooked in rich Indian gravy.</div> <!-- Short description -->
+    </div> <!-- Closes the name/description wrapper -->
+  </div> <!-- Closes the left div -->
+  <span>₹140</span> <!-- The price shown on the right -->
+</div> <!-- Closes the row -->
 
-<div class="row">
-  <div class="left">
-    <img src="image/friedrice.jpeg">
-    <div>
-      Fried Rice
-      <div class="desc">Rice stir-fried with vegetables & spices.</div>
-    </div>
-  </div>
-  <span>₹110</span>
-</div>
+<!-- LUNCH ITEM 3: Fried Rice -->
+<div class="row"> <!-- A row for the Fried Rice menu item -->
+  <div class="left"> <!-- Groups the image and text on the left -->
+    <img src="image/friedrice.jpeg"> <!-- The circular food image for Fried Rice -->
+    <div> <!-- Wraps the item name and description -->
+      Fried Rice <!-- The name of the menu item -->
+      <div class="desc">Rice stir-fried with vegetables & spices.</div> <!-- Short description -->
+    </div> <!-- Closes the name/description wrapper -->
+  </div> <!-- Closes the left div -->
+  <span>₹110</span> <!-- The price shown on the right -->
+</div> <!-- Closes the row -->
 
-<div class="row">
-  <div class="left">
-    <img src="image/daltadka.jpeg">
-    <div>
-      Dal Tadka
-      <div class="desc">Yellow lentils tempered with garlic & spices.</div>
-    </div>
-  </div>
-  <span>₹100</span>
-</div>
+<!-- LUNCH ITEM 4: Dal Tadka -->
+<div class="row"> <!-- A row for the Dal Tadka menu item -->
+  <div class="left"> <!-- Groups the image and text on the left -->
+    <img src="image/daltadka.jpeg"> <!-- The circular food image for Dal Tadka -->
+    <div> <!-- Wraps the item name and description -->
+      Dal Tadka <!-- The name of the menu item -->
+      <div class="desc">Yellow lentils tempered with garlic & spices.</div> <!-- Short description -->
+    </div> <!-- Closes the name/description wrapper -->
+  </div> <!-- Closes the left div -->
+  <span>₹100</span> <!-- The price shown on the right -->
+</div> <!-- Closes the row -->
 
-<div class="row">
-  <div class="left">
-    <img src="image/chapatiset.jpeg">
-    <div>
-      Chapati Set
-      <div class="desc">Soft wheat chapatis served fresh & hot.</div>
-    </div>
-  </div>
-  <span>₹80</span>
-</div>
+<!-- LUNCH ITEM 5: Chapati Set -->
+<div class="row"> <!-- A row for the Chapati Set menu item -->
+  <div class="left"> <!-- Groups the image and text on the left -->
+    <img src="image/chapatiset.jpeg"> <!-- The circular food image for Chapati Set -->
+    <div> <!-- Wraps the item name and description -->
+      Chapati Set <!-- The name of the menu item -->
+      <div class="desc">Soft wheat chapatis served fresh & hot.</div> <!-- Short description -->
+    </div> <!-- Closes the name/description wrapper -->
+  </div> <!-- Closes the left div -->
+  <span>₹80</span> <!-- The price shown on the right -->
+</div> <!-- Closes the row -->
 
-<div class="row">
-  <div class="left">
-    <img src="image/lemonrice.jpeg">
-    <div>
-      Lemon Rice
-      <div class="desc">South Indian rice with lemon & peanuts.</div>
-    </div>
-  </div>
-  <span>₹85</span>
-</div>
+<!-- LUNCH ITEM 6: Lemon Rice -->
+<div class="row"> <!-- A row for the Lemon Rice menu item -->
+  <div class="left"> <!-- Groups the image and text on the left -->
+    <img src="image/lemonrice.jpeg"> <!-- The circular food image for Lemon Rice -->
+    <div> <!-- Wraps the item name and description -->
+      Lemon Rice <!-- The name of the menu item -->
+      <div class="desc">South Indian rice with lemon & peanuts.</div> <!-- Short description -->
+    </div> <!-- Closes the name/description wrapper -->
+  </div> <!-- Closes the left div -->
+  <span>₹85</span> <!-- The price shown on the right -->
+</div> <!-- Closes the row -->
 
-</div>
-</div>
+</div> <!-- Closes the menuCard div for the Lunch section -->
+</div> <!-- Closes the Lunch Menu section wrapper div -->
 
-<!-- DINNER MENU -->
-<div>
-<h2>Dinner Menu</h2>
+<!-- DINNER MENU --> <!-- A comment to mark the start of the Dinner Menu section -->
+<div> <!-- A plain div that wraps the entire Dinner Menu section -->
+<h2>Dinner Menu</h2> <!-- The heading displayed above the dinner menu card -->
 
-<div class="menuCard">
+<div class="menuCard"> <!-- The grey rounded card that contains all dinner menu items -->
 
-<div class="row">
-  <div class="left">
-    <img src="image/butternaan.jpeg">
-    <div>
-      Butter Naan
-      <div class="desc">Soft tandoor bread brushed with butter.</div>
-    </div>
-  </div>
-  <span>₹40</span>
-</div>
+<!-- DINNER ITEM 1: Butter Naan -->
+<div class="row"> <!-- A row for the Butter Naan menu item -->
+  <div class="left"> <!-- Groups the image and text on the left -->
+    <img src="image/butternaan.jpeg"> <!-- The circular food image for Butter Naan -->
+    <div> <!-- Wraps the item name and description -->
+      Butter Naan <!-- The name of the menu item -->
+      <div class="desc">Soft tandoor bread brushed with butter.</div> <!-- Short description -->
+    </div> <!-- Closes the name/description wrapper -->
+  </div> <!-- Closes the left div -->
+  <span>₹40</span> <!-- The price shown on the right -->
+</div> <!-- Closes the row -->
 
-<div class="row">
-  <div class="left">
-    <img src="image/vegbiryani.jpeg">
-    <div>
-      Veg Biryani
-      <div class="desc">Aromatic basmati rice with fresh vegetables.</div>
-    </div>
-  </div>
-  <span>₹150</span>
-</div>
+<!-- DINNER ITEM 2: Veg Biryani -->
+<div class="row"> <!-- A row for the Veg Biryani menu item -->
+  <div class="left"> <!-- Groups the image and text on the left -->
+    <img src="image/vegbiryani.jpeg"> <!-- The circular food image for Veg Biryani -->
+    <div> <!-- Wraps the item name and description -->
+      Veg Biryani <!-- The name of the menu item -->
+      <div class="desc">Aromatic basmati rice with fresh vegetables.</div> <!-- Short description -->
+    </div> <!-- Closes the name/description wrapper -->
+  </div> <!-- Closes the left div -->
+  <span>₹150</span> <!-- The price shown on the right -->
+</div> <!-- Closes the row -->
 
-<div class="row">
-  <div class="left">
-    <img src="image/Soup.jpeg">
-    <div>
-      Soup
-      <div class="desc">Warm & comforting vegetable soup.</div>
-    </div>
-  </div>
-  <span>₹70</span>
-</div>
+<!-- DINNER ITEM 3: Soup -->
+<div class="row"> <!-- A row for the Soup menu item -->
+  <div class="left"> <!-- Groups the image and text on the left -->
+    <img src="image/Soup.jpeg"> <!-- The circular food image for Soup -->
+    <div> <!-- Wraps the item name and description -->
+      Soup <!-- The name of the menu item -->
+      <div class="desc">Warm & comforting vegetable soup.</div> <!-- Short description -->
+    </div> <!-- Closes the name/description wrapper -->
+  </div> <!-- Closes the left div -->
+  <span>₹70</span> <!-- The price shown on the right -->
+</div> <!-- Closes the row -->
 
-<div class="row">
-  <div class="left">
-    <img src="image/Salad.jpeg">
-    <div>
-      Salad
-      <div class="desc">Fresh seasonal vegetables with light dressing.</div>
-    </div>
-  </div>
-  <span>₹60</span>
-</div>
+<!-- DINNER ITEM 4: Salad -->
+<div class="row"> <!-- A row for the Salad menu item -->
+  <div class="left"> <!-- Groups the image and text on the left -->
+    <img src="image/Salad.jpeg"> <!-- The circular food image for Salad -->
+    <div> <!-- Wraps the item name and description -->
+      Salad <!-- The name of the menu item -->
+      <div class="desc">Fresh seasonal vegetables with light dressing.</div> <!-- Short description -->
+    </div> <!-- Closes the name/description wrapper -->
+  </div> <!-- Closes the left div -->
+  <span>₹60</span> <!-- The price shown on the right -->
+</div> <!-- Closes the row -->
 
-<div class="row">
-  <div class="left">
-    <img src="image/gobimanchurian.jpeg">
-    <div>
-      Gobi Manchurian
-      <div class="desc">Crispy cauliflower tossed in spicy sauce.</div>
-    </div>
-  </div>
-  <span>₹130</span>
-</div>
+<!-- DINNER ITEM 5: Gobi Manchurian -->
+<div class="row"> <!-- A row for the Gobi Manchurian menu item -->
+  <div class="left"> <!-- Groups the image and text on the left -->
+    <img src="image/gobimanchurian.jpeg"> <!-- The circular food image for Gobi Manchurian -->
+    <div> <!-- Wraps the item name and description -->
+      Gobi Manchurian <!-- The name of the menu item -->
+      <div class="desc">Crispy cauliflower tossed in spicy sauce.</div> <!-- Short description -->
+    </div> <!-- Closes the name/description wrapper -->
+  </div> <!-- Closes the left div -->
+  <span>₹130</span> <!-- The price shown on the right -->
+</div> <!-- Closes the row -->
 
-<div class="row">
-  <div class="left">
-    <img src="image/jeerarice.jpeg">
-    <div>
-      Jeera Rice
-      <div class="desc">Fragrant basmati rice tempered with cumin.</div>
-    </div>
-  </div>
-  <span>₹120</span>
-</div>
+<!-- DINNER ITEM 6: Jeera Rice -->
+<div class="row"> <!-- A row for the Jeera Rice menu item -->
+  <div class="left"> <!-- Groups the image and text on the left -->
+    <img src="image/jeerarice.jpeg"> <!-- The circular food image for Jeera Rice -->
+    <div> <!-- Wraps the item name and description -->
+      Jeera Rice <!-- The name of the menu item -->
+      <div class="desc">Fragrant basmati rice tempered with cumin.</div> <!-- Short description -->
+    </div> <!-- Closes the name/description wrapper -->
+  </div> <!-- Closes the left div -->
+  <span>₹120</span> <!-- The price shown on the right -->
+</div> <!-- Closes the row -->
 
-</div>
-</div>
+</div> <!-- Closes the menuCard div for the Dinner section -->
+</div> <!-- Closes the Dinner Menu section wrapper div -->
 
-</div>
+</div> <!-- Closes the menuWrapper div -->
 
-<div class="menu-buttons">
+<!-- ========= BOTTOM BUTTONS ========= -->
+<div class="menu-buttons"> <!-- A row that holds the two buttons at the bottom of the page -->
 
-    <a href="index.html" class="btn">
-        ← Back to Home
-    </a>
+    <a href="index.html" class="btn"> <!-- A red pill-shaped button that links back to the Home page -->
+        ← Back to Home <!-- The text shown inside the first button -->
+    </a> <!-- Closes the first button link -->
 
-    <a href="booking.html" class="btn">
-        Book a Reservation
-    </a>
+    <a href="booking.html" class="btn"> <!-- A red pill-shaped button that links to the Booking page -->
+        Book a Reservation <!-- The text shown inside the second button -->
+    </a> <!-- Closes the second button link -->
 
-</div>
+</div> <!-- Closes the menu-buttons div -->
 
-</body>
-</html>
+</body> <!-- Closes the body section -->
+</html> <!-- Closes the root HTML element -->
