@@ -1,40 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Booking</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<!DOCTYPE html> <!-- Tells the browser this is an HTML5 document — always the first line -->
+<html> <!-- Opens the root HTML element that wraps the entire page -->
+<head> <!-- Opens the head section — contains setup info, not visible on the page -->
+<title>Booking</title> <!-- Sets the text shown on the browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Links your CSS file so the page uses your styles -->
+</head> <!-- Closes the head section -->
+<body class="booking-body"> <!-- Opens the body and applies the booking-body class — sets the dark background image -->
+<div class="booking-card"> <!-- Creates the brown rounded card in the centre of the page -->
+    <h2>Reserve Your Table</h2> <!-- The heading displayed at the top of the booking card -->
+    <form action="confirm.html"> <!-- Opens the form — when submitted, it sends the user to confirm.html -->
+        <input type="text" placeholder="Name" required> <!-- A text field where the user types their name — required means it cannot be left empty -->
 
-<body class="booking-body">
-
-<div class="booking-card">
-
-    <h2>Reserve Your Table</h2>
-
-    <form action="confirm.html">
-
-        <input type="text" placeholder="Name" required>
-
+        <!-- Phone field: accepts exactly 10 digits only, letters and symbols not allowed -->
         <input type="tel" placeholder="Phone Number"
                pattern="[0-9]{10}"
                maxlength="10"
                required>
 
-        <input type="number" placeholder="Guests" min="1" required>
-
-        <input type="date" required>
-
-        <input type="time" required>
-
-        <button type="submit" class="confirm-btn">
-            Confirm Booking
-        </button>
-<p class="back-home">
-   <a href="index.html">← Back to Home</a>
-</p>
-    </form>
-
-</div>
-
-</body>
-</html>
+        <input type="number" placeholder="Guests" min="1" required> <!-- A number field for guest count — min="1" means at least 1 guest is required -->
+        <input type="date" required> <!-- A date picker field — lets the user choose a date from a calendar -->
+        <input type="time" required> <!-- A time picker field — lets the user choose a time -->
+        <button type="submit" class="confirm-btn"> <!-- A green submit button — clicking this submits the form and goes to confirm.html -->
+            Confirm Booking <!-- The text shown inside the submit button -->
+        </button> <!-- Closes the submit button -->
+<p class="back-home"> <!-- A paragraph styled to sit below the button, centred -->
+   <a href="index.html">← Back to Home</a> <!-- A link that takes the user back to the Home page -->
+</p> <!-- Closes the back-home paragraph -->
+    </form> <!-- Closes the form -->
+</div> <!-- Closes the booking-card div -->
+</body> <!-- Closes the body section -->
+</html> <!-- Closes the root HTML element -->
