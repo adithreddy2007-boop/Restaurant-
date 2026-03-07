@@ -1,40 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Fooday Restaurant</title>
+<!DOCTYPE html> <!-- Tells the browser this is an HTML5 document — always the first line -->
+<html> <!-- Opens the root HTML element that wraps the entire page -->
+<head> <!-- Opens the head section — contains setup info, not visible on the page -->
+<title>Pasha Restaurant</title> <!-- Sets the text shown on the browser tab -->
+<link rel="stylesheet" href="style.css"> <!-- Links your CSS file so the page uses your styles -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> <!-- Loads Poppins and Playfair Display fonts from Google Fonts -->
+</head> <!-- Closes the head section -->
 
-<link rel="stylesheet" href="style.css">
+<body> <!-- Opens the body section — everything visible on the page goes here -->
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-</head>
+<!-- ========= TOP BAR ========= -->
+<div class="topbar"> <!-- Creates the thin orange bar at the very top of the page -->
+<span>📍 Indiranagar </span> <!-- Shows the restaurant location with a pin emoji -->
+<span>📞 +91 98374 83947</span> <!-- Shows the phone number with a phone emoji -->
+</div> <!-- Closes the topbar -->
 
-<body>
+<!-- ========= NAVBAR ========= -->
+<div class="navbar"> <!-- Creates the navigation bar with logo and links -->
+<div class="logo">PASHA</div> <!-- Shows the restaurant name as the logo on the left -->
 
-<div class="topbar">
-<span>📍 Indiranagar </span>
-<span>📞 +91 98374 83947</span>
-</div>
+<div class="navlinks"> <!-- Groups all the navigation links together on the right -->
+<a href="index.html">HOME</a> <!-- Link that takes the user to the Home page -->
+<a href="about.html">ABOUT</a> <!-- Link that takes the user to the About page -->
+<a href="menu.html">MENU</a> <!-- Link that takes the user to the Menu page -->
+<a href="booking.html">RESERVATION</a> <!-- Link that takes the user to the Booking/Reservation page -->
+<a href="contact.html">CONTACT</a> <!-- Link that takes the user to the Contact page -->
+</div> <!-- Closes the navlinks div -->
+</div> <!-- Closes the navbar div -->
 
-<div class="navbar">
-<div class="logo">FOODAY</div>
+<!-- ========= HERO SECTION ========= -->
+<div class="hero"> <!-- Creates the big full-screen banner section with the background image -->
+<div class="heroContent"> <!-- Groups the text content in the centre of the hero section -->
+<div class="line"></div> <!-- Shows a decorative white horizontal line above the heading -->
+<h1>Pasha Restaurant</h1> <!-- The main large heading shown on the hero banner -->
+<p>Tasty • Delicious • Savoury</p> <!-- A tagline shown below the main heading -->
+<div class="line"></div> <!-- Shows a decorative white horizontal line below the tagline -->
+</div> <!-- Closes the heroContent div -->
+</div> <!-- Closes the hero div -->
 
-<div class="navlinks">
-<a href="index.html">HOME</a>
-<a href="about.html">ABOUT</a>
-<a href="menu.html">MENU</a>
-<a href="booking.html">RESERVATION</a>
-<a href="contact.html">CONTACT</a>
-</div>
-</div>
-
-<div class="hero">
-<div class="heroContent">
-<div class="line"></div>
-<h1>FOODAY RESTAURANT</h1>
-<p>Tasty • Delicious • Savoury</p>
-<div class="line"></div>
-</div>
-</div>
-
-</body>
-</html>
+</body> <!-- Closes the body section -->
+</html> <!-- Closes the root HTML element -->
