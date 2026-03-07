@@ -1,520 +1,614 @@
 /* ========= GOOGLE FONTS ========= */
+/* This imports two fonts from Google Fonts to use on your website */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap');
+/* Poppins is a clean modern font; Playfair Display is an elegant serif font for headings */
 
 /* ========= GLOBAL ========= */
+/* Styles the <body> tag — these apply to the whole page */
 body{
-    margin:0;
-    font-family:'Poppins', sans-serif;
-    background:#efe6dc;
+    margin:0;                        /* Removes the default white gap around the page edges */
+    font-family:'Poppins', sans-serif; /* Sets Poppins as the default font everywhere */
+    background:#efe6dc;              /* Sets a warm beige background colour for the whole page */
 }
 
 /* ========= TOP BAR ========= */
+/* Styles the thin orange bar at the very top of the page */
 .topbar{
-    background:#e55b2d;
-    color:white;
-    padding:8px;
-    font-size:14px;
-    display:flex;
-    justify-content:space-around;
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:1000;
+    background:#e55b2d;              /* Orange-red background colour for the top bar */
+    color:white;                     /* Makes all text inside the top bar white */
+    padding:8px;                     /* Adds 8px of space inside the bar on all sides */
+    font-size:14px;                  /* Sets a small text size for the top bar text */
+    display:flex;                    /* Turns the bar into a flex container so items line up in a row */
+    justify-content:space-around;   /* Spreads items evenly with equal space between them */
+    position:fixed;                  /* Keeps the top bar stuck at the top even when you scroll */
+    top:0;                           /* Places the bar at the very top of the screen */
+    width:100%;                      /* Makes the bar stretch across the full width of the screen */
+    z-index:1000;                    /* Puts the bar on top of other elements so nothing overlaps it */
 }
 
 /* ========= NAVBAR ========= */
+/* Styles the navigation bar with the logo and links */
 .navbar{
-    position:fixed;
-    top:40px;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    padding:10px 20px;
-    color:white;
-    z-index:1000;
+    position:fixed;                  /* Keeps the navbar stuck in place while scrolling */
+    top:40px;                        /* Positions the navbar 40px from the top (just below the top bar) */
+    width:100%;                      /* Makes the navbar stretch the full width of the screen */
+    display:flex;                    /* Lines up the logo and nav links side by side */
+    justify-content:space-between;  /* Pushes logo to the left and links to the right */
+    padding:10px 20px;               /* Adds 10px top/bottom and 20px left/right space inside */
+    color:white;                     /* Makes all text inside the navbar white */
+    z-index:1000;                    /* Keeps the navbar above other elements on the page */
 }
 
 .navlinks{
-    display:flex;
-    gap:30px;
-    margin-right:40px;
+    margin-right:30px;               /* Pushes the nav links 30px away from the right edge */
 }
 
 .logo{
-    font-size:24px;
-    font-weight:bold;
+    font-size:24px;                  /* Makes the logo text large */
+    font-weight:bold;                /* Makes the logo text bold */
 }
 
+/* Styles every link <a> inside the .navlinks section */
 .navlinks a{
-    margin:0 15px;
-    color:white;
-    text-decoration:none;
+    margin:0 15px;                   /* Adds 15px of space on the left and right of each link */
+    color:white;                     /* Makes the link text white */
+    text-decoration:none;            /* Removes the default underline from links */
 }
 
 /* ========= HERO ========= */
+/* Styles the big full-screen banner section on the homepage */
 .hero{
-    height:100vh;
-    background:url("image/bg.jpeg") center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-    position:relative;
+    height:100vh;                    /* Makes the hero section fill the full height of the screen */
+    background:url("image/bg.jpeg") center/cover; /* Sets a background image, centered and covering the full area */
+    display:flex;                    /* Uses flexbox to centre the content inside */
+    justify-content:center;         /* Centres content horizontally */
+    align-items:center;              /* Centres content vertically */
+    text-align:center;               /* Centres the text inside */
+    color:white;                     /* Makes all text in the hero section white */
+    position:relative;               /* Needed so the dark overlay (::before) is positioned correctly */
 }
 
+/* Creates a dark overlay on top of the hero background image */
 .hero::before{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.5);
+    content:"";                      /* Required for ::before to appear — it has no text, just a coloured block */
+    position:absolute;               /* Positions the overlay exactly over the hero section */
+    width:100%;                      /* Stretches the overlay across the full width */
+    height:100%;                     /* Stretches the overlay across the full height */
+    background:rgba(0,0,0,0.5);     /* A black colour at 50% transparency to darken the image */
 }
 
+/* Styles the text/content sitting on top of the hero image */
 .heroContent{
-    position:relative;
-    z-index:1;
+    position:relative;               /* Lifts the content above the dark overlay */
+    z-index:1;                       /* Makes sure the content appears on top of the ::before overlay */
 }
 
+/* Styles the main heading inside the hero section */
 .heroContent h1{
-    font-family:'Playfair Display', serif;
-    font-size:70px;
-    font-weight:700; 
+    font-family:'Playfair Display', serif; /* Uses the elegant Playfair Display font */
+    font-size:70px;                  /* Makes the heading very large */
+    font-weight:700;                 /* Makes the heading bold */
 }
 
+/* Styles the paragraph text inside the hero section */
 .heroContent p{
-    font-size:22px;
-    letter-spacing:2px;
+    font-size:22px;                  /* Sets a medium-large font size */
+    letter-spacing:2px;              /* Adds spacing between each letter for a stylish look */
 }
 
+/* Styles the decorative white horizontal line in the hero section */
 .line{
-    width:200px;
-    height:2px;
-    background:white;
-    margin:20px auto;
+    width:200px;                     /* Sets the line to be 200px wide */
+    height:2px;                      /* Makes the line 2px tall (thin) */
+    background:white;                /* Colours the line white */
+    margin:20px auto;                /* Adds 20px space above/below and centres it horizontally */
 }
 
 /* ========= ABOUT PAGE ========= */
+/* Styles the top banner section on the About page */
 .about-hero{
-    height:40vh;
-    background:#7a7471;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
+    height:40vh;                     /* Makes the about banner 40% of the screen height */
+    background:#7a7471;              /* Sets a grey-brown background colour */
+    display:flex;                    /* Uses flexbox to centre the content */
+    justify-content:center;         /* Centres content horizontally */
+    align-items:center;              /* Centres content vertically */
+    color:white;                     /* Makes the text white */
 }
 
+/* Styles the heading inside the about hero banner */
 .about-hero h1{
-    font-family:'Playfair Display', serif;
-    font-size:48px;
+    font-family:'Playfair Display', serif; /* Uses the elegant Playfair Display font */
+    font-size:48px;                  /* Sets a large font size for the heading */
 }
 
+/* Styles the white card box that appears below the about banner */
 .about-box{
-    max-width:700px;
-    margin:-60px auto 40px auto;
-    background:#faf9f8;   /* card colour */
-    padding:35px;
-    border-radius:18px;
-    box-shadow:0 12px 25px rgba(0,0,0,0.15);
-    text-align:center;
+    max-width:700px;                 /* Limits the card width to 700px so it doesn't stretch too wide */
+    margin:-60px auto 40px auto;    /* Negative top margin pulls the card up to overlap the banner slightly */
+    background:#faf9f8;              /* Sets a near-white background colour for the card */
+    padding:35px;                    /* Adds 35px of space inside the card on all sides */
+    border-radius:18px;              /* Rounds the corners of the card */
+    box-shadow:0 12px 25px rgba(0,0,0,0.15); /* Adds a soft shadow to make the card look lifted */
+    text-align:center;               /* Centres all text inside the card */
 }
 
+/* Styles the main paragraph text inside the about card */
 .about-text{
-    font-size:19px;
-    line-height:1.9;
-    color:#444;
-    margin-bottom:35px;
+    font-size:19px;                  /* Sets a comfortable reading font size */
+    line-height:1.9;                 /* Increases space between lines for better readability */
+    color:#444;                      /* Sets a dark grey colour for the text */
+    margin-bottom:35px;              /* Adds space below the text block */
 }
 
+/* Styles the row that holds the feature boxes */
 .features{
-    display:flex;
-    flex-direction:center;     /* display horizontally */
-    gap:15px;              /* space between boxes */
-    margin-top:25px;
-    justify-content:center; /* center the boxes */
-    flex-wrap:wrap;        /* wrap if needed on mobile */
+    display:flex;                    /* Lines up the feature boxes side by side */
+    flex-direction:center;           /* Note: 'center' is not a valid value here — should be 'row' */
+    gap:15px;                        /* Adds 15px of space between each feature box */
+    margin-top:25px;                 /* Adds 25px of space above the feature row */
+    justify-content:center;         /* Centres the feature boxes horizontally */
+    flex-wrap:wrap;                  /* Allows the boxes to wrap onto the next line on small screens */
 }
 
+/* Styles each individual feature box */
 .feature{
-    background:#d6e0dc;
-    padding:14px 22px;
-    border-radius:12px;
-    font-size:16px;
-    font-weight:600;
-    color:#2f4f46;
-    text-align:center;
-    flex:1;
-    min-width:120px;
-    box-shadow:0 2px 4px rgba(0,0,0,0.05);
+    background:#d6e0dc;              /* Sets a soft green-grey background colour */
+    padding:14px 22px;               /* Adds 14px top/bottom and 22px left/right space inside */
+    border-radius:12px;              /* Rounds the corners of the feature box */
+    font-size:16px;                  /* Sets the text size inside the box */
+    font-weight:600;                 /* Makes the text semi-bold */
+    color:#2f4f46;                   /* Sets a dark green colour for the text */
+    text-align:center;               /* Centres the text inside the box */
+    flex:1;                          /* Lets each box grow to fill available space equally */
+    min-width:120px;                 /* Prevents the box from becoming too narrow */
+    box-shadow:0 2px 4px rgba(0,0,0,0.05); /* Adds a very subtle shadow for depth */
 }
 
+/* Styles the container that holds buttons */
 .button-group{
-    text-align:center;
-    margin-top:20px;
+    text-align:center;               /* Centres the button horizontally */
+    margin-top:20px;                 /* Adds space above the button */
 }
 
+/* Styles the green "Back to Home" button */
 .green-btn{
-    display:inline-block;
-    text-decoration:none;
-    padding:10px 20px;   /* back to home button size */
-    background:#1f7a4d;
-    color:white;
-    font-weight:600;
-    font-size:14px;      /* font size */
-    border-radius:6px;   /* reduced from 30px */
-    transition:0.3s;
+    display:inline-block;            /* Makes the link behave like a block element but only as wide as its content */
+    text-decoration:none;            /* Removes the underline from the link */
+    padding:10px 20px;               /* Adds 10px top/bottom and 20px left/right space inside the button */
+    background:#1f7a4d;              /* Sets a dark green background colour */
+    color:white;                     /* Makes the button text white */
+    font-weight:600;                 /* Makes the text semi-bold */
+    font-size:14px;                  /* Sets the font size inside the button */
+    border-radius:6px;               /* Slightly rounds the corners of the button */
+    transition:0.3s;                 /* Smoothly animates any changes (like hover effects) over 0.3 seconds */
 }
 
+/* Styles the green button when the user hovers over it */
 .green-btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 8px 20px rgba(31,122,77,0.3);
+    transform:translateY(-2px);      /* Moves the button 2px upward to create a "lift" effect */
+    box-shadow:0 8px 20px rgba(31,122,77,0.3); /* Adds a green-tinted shadow on hover */
 }
 
 /* ================= MENU ================= */
 
+/* Styles the wrapper that contains all menu sections */
 .menuWrapper{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin-top:40px;
+    display:flex;                    /* Uses flexbox layout */
+    flex-direction:column;           /* Stacks menu sections on top of each other vertically */
+    align-items:center;              /* Centres all menu content horizontally */
+    margin-top:40px;                 /* Adds 40px of space above the menu section */
 }
 
+/* Styles all <h2> headings on the page */
 h2{
-    text-align:center;
-    color:#1f4d3a;
-    font-size:50px;
-    margin:0 0 18px;
-    font-family:'Playfair Display', serif;
-    font-weight:700; 
+    text-align:center;               /* Centres the heading text */
+    color:#1f4d3a;                   /* Sets a dark green colour for the heading */
+    font-size:50px;                  /* Makes the heading large */
+    margin:0 0 18px;                 /* Removes top margin and adds 18px of space below */
+    font-family:'Playfair Display', serif; /* Uses the elegant Playfair Display font */
+    font-weight:700;                 /* Makes the heading bold */
 }
 
+/* Targets the second child div inside .menuWrapper and adjusts its h2 heading */
 .menuWrapper > div:nth-child(2) h2{
-    margin-top:90px;
+    margin-top:90px;                 /* Adds 90px of space above the second menu section heading */
 }
 
+/* Styles the white card that wraps each menu section */
 .menuCard{
-    background:#f4f4f4;
-    width:760px;
-    padding:55px 70px;
-    border-radius:22px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.18);
+    background:#f4f4f4;              /* Sets a light grey background for the card */
+    width:760px;                     /* Sets a fixed width of 760px for the card */
+    padding:55px 70px;               /* Adds 55px top/bottom and 70px left/right space inside the card */
+    border-radius:22px;              /* Rounds the corners of the card */
+    box-shadow:0 12px 30px rgba(0,0,0,0.18); /* Adds a medium shadow to lift the card off the page */
 }
 
+/* Styles each menu item row inside the card */
 .row{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:22px 0;
-    border-bottom:1px dotted #bfbfbf;
+    display:flex;                    /* Lines up the image, name, and price side by side */
+    justify-content:space-between;  /* Pushes content to the left and right ends of the row */
+    align-items:center;              /* Vertically centres items in the row */
+    padding:22px 0;                  /* Adds 22px of space above and below each row */
+    border-bottom:1px dotted #bfbfbf; /* Adds a dotted grey line below each row as a divider */
 }
 
+/* Removes the bottom border from the very last row */
 .row:last-child{
-    border-bottom:none;
+    border-bottom:none;              /* No divider line below the final menu item */
 }
 
+/* Styles the left side of each menu row (image + name) */
 .left{
-    display:flex;
-    align-items:center;
+    display:flex;                    /* Lines up the image and text side by side */
+    align-items:center;              /* Vertically centres the image and text */
 }
 
+/* Styles the small circular food image in each menu row */
 .left img{
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    margin-right:16px;
+    width:58px;                      /* Sets the image width to 58px */
+    height:58px;                     /* Sets the image height to 58px */
+    border-radius:50%;               /* Makes the image perfectly circular */
+    margin-right:16px;               /* Adds space between the image and the text */
 }
 
+/* Styles the text container next to the image */
 .left span{
-    display:flex;
-    flex-direction:column;
-    font-size:20px;
-    font-weight:500;
-    color:#222;
+    display:flex;                    /* Uses flexbox to stack the name and description */
+    flex-direction:column;           /* Stacks the name above the description */
+    font-size:20px;                  /* Sets the font size for the item name */
+    font-weight:500;                 /* Makes the name slightly bold */
+    color:#222;                      /* Sets a near-black colour for the item name */
 }
 
+/* Styles the small description text below the item name */
 .desc{
-    font-size:15px;
-    color:#6b6b6b;
-    margin-top:6px;
+    font-size:15px;                  /* Smaller font size for the description */
+    color:#6b6b6b;                   /* Sets a medium grey colour for the description text */
+    margin-top:6px;                  /* Adds a small gap between the name and description */
 }
 
+/* Styles the price shown on the right side of each menu row */
 .row span:last-child{
-    font-size:20px;
-    font-weight:600;
-    color:#222;
+    font-size:20px;                  /* Same size as the item name */
+    font-weight:600;                 /* Makes the price semi-bold */
+    color:#222;                      /* Sets a near-black colour for the price */
 }
 
 /* ========= BUTTONS ========= */
 
+/* Styles the container holding the menu page buttons */
 .menu-buttons{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    margin:40px 0 60px;
+    display:flex;                    /* Lines up buttons side by side */
+    justify-content:center;         /* Centres the buttons horizontally */
+    gap:40px;                        /* Adds 40px of space between the buttons */
+    margin:40px 0 60px;             /* Adds 40px above and 60px below the button row */
 }
 
+/* Styles the red gradient buttons on the menu page */
 .btn{
-    text-decoration:none;
-    padding:12px 30px;   /* reduced from 18px 45px */
-    font-size:15px;      /* reduced from 18px */
-    font-weight:600;
-    color:white;
-    background:linear-gradient(135deg,#f64b17,#c20303);
-    border-radius:40px;
-    box-shadow:0 10px 20px rgba(0,0,0,0.25);
-    transition:0.3s ease;
+    text-decoration:none;            /* Removes underline from the button link */
+    padding:12px 30px;               /* Adds 12px top/bottom and 30px left/right space inside */
+    font-size:15px;                  /* Sets the font size inside the button */
+    font-weight:600;                 /* Makes the button text semi-bold */
+    color:white;                     /* Makes the button text white */
+    background:linear-gradient(135deg,#f64b17,#c20303); /* Red gradient background going diagonally */
+    border-radius:40px;              /* Fully rounds the button into a pill shape */
+    box-shadow:0 10px 20px rgba(0,0,0,0.25); /* Adds a shadow below the button */
+    transition:0.3s ease;            /* Smoothly animates hover changes over 0.3 seconds */
 }
 
+/* Styles the button when hovered */
 .btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 14px 28px rgba(0,0,0,0.35);
+    transform:translateY(-3px);      /* Lifts the button 3px upward on hover */
+    box-shadow:0 14px 28px rgba(0,0,0,0.35); /* Increases the shadow on hover for a stronger lift effect */
 }
 
 /* ========= BOOKING ========= */
 
+/* Styles the background of the booking page */
 .booking-body{
-    background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url("image/bg3.jpeg") center/cover no-repeat;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-    align-items:center;
-    padding-top:40px;   /* reduced space above box */
+    background:                      /* Layered background: dark overlay on top of an image */
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), /* Semi-transparent black overlay */
+    url("image/bg3.jpeg") center/cover no-repeat; /* Background image, centred and covering the full area */
+    min-height:100vh;                /* Makes the page at least the full height of the screen */
+    display:flex;                    /* Uses flexbox to arrange content */
+    flex-direction:column;           /* Stacks content vertically */
+    justify-content:flex-start;     /* Aligns content to the top of the page */
+    align-items:center;              /* Centres content horizontally */
+    padding-top:40px;                /* Adds 40px of space above the booking card */
 }
 
+/* Styles the booking form card */
 .booking-card{
-    background:#6B4F3A;
-    padding:55px 45px;
-    border-radius:20px;
-    width:360px;
-    box-shadow:0 25px 60px rgba(0,0,0,0.35);
-    text-align:center;
-    margin:auto;
+    background:#6B4F3A;              /* Sets a warm brown background for the card */
+    padding:55px 45px;               /* Adds 55px top/bottom and 45px left/right space inside */
+    border-radius:20px;              /* Rounds the corners of the card */
+    width:360px;                     /* Sets a fixed width for the card */
+    box-shadow:0 25px 60px rgba(0,0,0,0.35); /* Adds a strong shadow for a floating effect */
+    text-align:center;               /* Centres all text inside the card */
+    margin:auto;                     /* Centres the card horizontally on the page */
 }
 
+/* Styles the heading inside the booking card */
 .booking-card h2{
-    font-size:30px;
-    color:#E6D2A8;
-    margin-bottom:30px;   /* extra space between title and inputs */
-    font-family:'Playfair Display', serif;
+    font-size:30px;                  /* Sets a large font size for the heading */
+    color:#E6D2A8;                   /* Sets a warm golden/cream colour for the heading */
+    margin-bottom:30px;              /* Adds space below the heading before the form fields */
+    font-family:'Playfair Display', serif; /* Uses the elegant Playfair Display font */
 }
 
+/* Styles all input fields, dropdowns, and text areas inside the booking card */
 .booking-card input,
 .booking-card select,
 .booking-card textarea{
-    width:100%;
-    padding:13px;           /* bigger inside area */
-    font-size:15px;         /* larger text for user data */
-    margin-bottom:23px;     /* more space between each field */
-    border-radius:8px;
-    border:1px solid #ccc;
-    transform: translateX(-14px); /* left or right horizontal shift */
+    width:100%;                      /* Makes each field stretch to the full width of the card */
+    padding:13px;                    /* Adds comfortable space inside each input field */
+    font-size:15px;                  /* Sets the text size the user types in */
+    margin-bottom:23px;              /* Adds space below each input field */
+    border-radius:8px;               /* Slightly rounds the corners of each field */
+    border:1px solid #ccc;           /* Adds a light grey border around each field */
+    transform: translateX(-14px);   /* Shifts all fields slightly to the left — used for alignment tweaking */
 }
 
+/* Styles the submit button inside the booking card */
 .booking-card button{
-    width:100%;
-    padding:10px;        /* reduced from 14px */
-    margin-top:15px;
-    border:none;
-    border-radius:30px;
-    font-size:14px;      /* reduced from 16px */
-    font-weight:600;
-    color:white;
-    background:#1f7a4d;
-    cursor:pointer;
-    transition:0.3s;
+    width:100%;                      /* Makes the button as wide as the card */
+    padding:10px;                    /* Adds space inside the button */
+    margin-top:15px;                 /* Adds space above the button */
+    border:none;                     /* Removes the default button border */
+    border-radius:30px;              /* Rounds the button into a pill shape */
+    font-size:14px;                  /* Sets the text size inside the button */
+    font-weight:600;                 /* Makes the button text semi-bold */
+    color:white;                     /* Makes the button text white */
+    background:#1f7a4d;              /* Sets a dark green background for the button */
+    cursor:pointer;                  /* Changes the mouse cursor to a hand when hovering */
+    transition:0.3s;                 /* Smoothly animates any hover changes */
 }
 
+/* Styles the booking button when hovered */
 .booking-card button:hover{
-    transform:translateY(-2px);
+    transform:translateY(-2px);      /* Lifts the button slightly on hover */
 }
-/* BACK TO HOME TEXT */
+
+/* Styles the "Back to Home" link below the booking form */
 .back-home{
-    margin-top:24px;   /* more space below confirm button */
-    margin-bottom:0;   /* ensure no extra space below */
-    text-align:center;
+    margin-top:24px;                 /* Adds space above the link */
+    margin-bottom:0;                 /* Removes any extra space below the link */
+    text-align:center;               /* Centres the link text */
 }
 
+/* Styles the anchor tag inside .back-home */
 .back-home a{
-    text-decoration:none;
-    color:#E6D2A8;
-    font-size:15px;
-    transition:0.3s;
+    text-decoration:none;            /* Removes the underline from the link */
+    color:#E6D2A8;                   /* Sets a warm golden/cream colour for the link */
+    font-size:15px;                  /* Sets the font size for the link text */
+    transition:0.3s;                 /* Smoothly animates colour changes on hover */
 }
 
+/* Styles the back-home link when hovered */
 .back-home a:hover{
-    color:white;
+    color:white;                     /* Changes the link colour to white on hover */
 }
 
 /* ========= CONFIRM PAGE ========= */
 
+/* Styles the confirmation page layout */
 .confirm-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#e6f4ea,#d4efe1);
-    font-family:Georgia, serif;
+    height:100vh;                    /* Makes the page fill the full screen height */
+    display:flex;                    /* Uses flexbox to centre the card */
+    justify-content:center;         /* Centres the card horizontally */
+    align-items:center;              /* Centres the card vertically */
+    background:linear-gradient(135deg,#e6f4ea,#d4efe1); /* Soft green gradient background */
+    font-family:Georgia, serif;      /* Uses Georgia font for the confirmation page */
 }
 
+/* Styles the white card on the confirmation page */
 .confirm-box{
-    background:white;
-    padding:50px 60px;
-    border-radius:18px;
-    text-align:center;
-    box-shadow:0 15px 35px rgba(0,0,0,0.15);
-    animation:pop 0.6s ease;
-    max-width:420px;
+    background:white;                /* White background for the card */
+    padding:50px 60px;               /* Adds 50px top/bottom and 60px left/right space inside */
+    border-radius:18px;              /* Rounds the corners of the card */
+    text-align:center;               /* Centres all text inside the card */
+    box-shadow:0 15px 35px rgba(0,0,0,0.15); /* Adds a soft shadow under the card */
+    animation:pop 0.6s ease;        /* Plays a "pop" animation when the card appears */
+    max-width:420px;                 /* Limits the card width so it doesn't get too wide */
 }
 
+/* Styles the emoji/icon shown at the top of the confirmation box */
 .icon{
-    font-size:60px;
-    margin-bottom:15px;
+    font-size:60px;                  /* Makes the icon very large */
+    margin-bottom:15px;              /* Adds space below the icon */
 }
 
+/* Styles the heading on the confirmation page */
 .confirm-box h1{
-    margin:10px 0;
-    color:#1f4d3a;
-    font-size:34px;
+    margin:10px 0;                   /* Adds small spacing above and below the heading */
+    color:#1f4d3a;                   /* Sets a dark green colour for the heading */
+    font-size:34px;                  /* Sets a large font size */
 }
 
+/* Styles the paragraph text on the confirmation page */
 .confirm-box p{
-    color:#555;
-    font-size:17px;
-    margin-bottom:30px;
-    line-height:1.5;
+    color:#555;                      /* Sets a medium grey colour for the text */
+    font-size:17px;                  /* Sets a comfortable reading size */
+    margin-bottom:30px;              /* Adds space below the paragraph before the button */
+    line-height:1.5;                 /* Increases line spacing for better readability */
 }
 
+/* Styles the link button on the confirmation page */
 .confirm-box a{
-    display:inline-block;
-    padding:12px 28px;
-    background:linear-gradient(135deg,#1f4d3a,#2f7b5b);
-    color:white;
-    text-decoration:none;
-    border-radius:25px;
-    font-size:16px;
-    transition:0.3s;
+    display:inline-block;            /* Makes the link behave like a block for padding to work */
+    padding:12px 28px;               /* Adds space inside the button */
+    background:linear-gradient(135deg,#1f4d3a,#2f7b5b); /* Dark to lighter green gradient */
+    color:white;                     /* Makes the button text white */
+    text-decoration:none;            /* Removes the underline */
+    border-radius:25px;              /* Rounds the button into a pill shape */
+    font-size:16px;                  /* Sets the font size for the button text */
+    transition:0.3s;                 /* Smoothly animates hover effects */
 }
 
+/* Styles the confirmation button when hovered */
 .confirm-box a:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.25);
-} 
+    transform:translateY(-3px);      /* Lifts the button 3px upward on hover */
+    box-shadow:0 8px 20px rgba(0,0,0,0.25); /* Adds a shadow below the button on hover */
+}
 
 /* ========= CONTACT PAGE ========= */
 
+/* Styles the main container for the contact page content */
 .contact-container{
-    max-width:700px;
-    margin:120px auto;
-    padding:20px;
+    max-width:700px;                 /* Limits the width so text doesn't stretch too wide */
+    margin:120px auto;               /* Adds 120px space at the top/bottom and centres horizontally */
+    padding:20px;                    /* Adds 20px of space on all sides inside the container */
 }
 
+/* Styles the heading on the contact page */
 .contact-container h1{
-    font-family:'Playfair Display', serif;
-    font-size:42px;
-    color:#1f4d3a;
-    margin-bottom:10px;
+    font-family:'Playfair Display', serif; /* Uses the elegant Playfair Display font */
+    font-size:42px;                  /* Sets a large font size for the heading */
+    color:#1f4d3a;                   /* Sets a dark green colour */
+    margin-bottom:10px;              /* Adds a small gap below the heading */
 }
 
+/* Styles the introductory text paragraph on the contact page */
 .contact-intro{
-    font-size:18px;
-    margin-bottom:30px;
-    color:#444;
+    font-size:18px;                  /* Sets a comfortable reading size */
+    margin-bottom:30px;              /* Adds space below the intro before the box */
+    color:#444;                      /* Sets a dark grey colour for the text */
 }
 
+/* Styles the white info box on the contact page */
 .contact-box{
-    background:white;
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.12);
-    line-height:1.7;
+    background:white;                /* White background for the box */
+    padding:30px;                    /* Adds 30px of space inside on all sides */
+    border-radius:18px;              /* Rounds the corners */
+    box-shadow:0 10px 25px rgba(0,0,0,0.12); /* Adds a soft shadow under the box */
+    line-height:1.7;                 /* Increases spacing between lines for readability */
 }
 
+/* Styles the sub-headings inside the contact info box */
 .contact-box h3{
-    margin-top:15px;
-    color:#1f4d3a;
+    margin-top:15px;                 /* Adds space above each sub-heading */
+    color:#1f4d3a;                   /* Sets a dark green colour for the sub-headings */
 }
 
+/* Styles the "Back to Home" link on the contact page */
 .contact-back{
-    display:inline-block;
-    margin-top:25px;
-    text-decoration:none;
-    color:#1f7a4d;
-    font-weight:600;
+    display:inline-block;            /* Makes the link behave like an inline block element */
+    margin-top:25px;                 /* Adds space above the link */
+    text-decoration:none;            /* Removes the underline */
+    color:#1f7a4d;                   /* Sets a green colour for the link text */
+    font-weight:600;                 /* Makes the link text semi-bold */
 }
+
 /* ========= CONTACT SPLIT CARD ========= */
 
+/* Styles the full-page background for the contact split layout */
 .contact-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(120deg,#d9a7c7,#fffcdc);
+    height:100vh;                    /* Makes the background fill the full screen */
+    display:flex;                    /* Uses flexbox to centre the card */
+    justify-content:center;         /* Centres the card horizontally */
+    align-items:center;              /* Centres the card vertically */
+    background:linear-gradient(120deg,#d9a7c7,#fffcdc); /* Purple-to-yellow gradient background */
 }
 
-/* main card */
+/* Styles the two-column contact card */
 .contact-card{
-    display:flex;
-    width:720px;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 20px 40px rgba(0,0,0,0.2);
-    background:white;
+    display:flex;                    /* Lines up the left and right sections side by side */
+    width:720px;                     /* Sets a fixed total width for the card */
+    border-radius:20px;              /* Rounds the corners of the whole card */
+    overflow:hidden;                 /* Hides anything that sticks out beyond the rounded corners */
+    box-shadow:0 20px 40px rgba(0,0,0,0.2); /* Adds a medium shadow around the card */
+    background:white;                /* Sets a white background (visible in the right section) */
 }
 
-/* left section */
+/* Styles the left (brown) section of the contact card */
 .contact-left{
-    width:45%;
-    background:linear-gradient(135deg,#8a4b08,#c47a3a);
-    color:white;
-    padding:40px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    width:45%;                       /* Takes up 45% of the card width */
+    background:linear-gradient(135deg,#8a4b08,#c47a3a); /* Brown gradient background */
+    color:white;                     /* Makes all text inside white */
+    padding:40px;                    /* Adds 40px of space inside */
+    display:flex;                    /* Uses flexbox to arrange the content */
+    flex-direction:column;           /* Stacks content vertically */
+    justify-content:center;         /* Vertically centres the content */
 }
 
+/* Styles the heading inside the left section */
 .contact-left h1{
-    font-family:'Playfair Display', serif;
-    font-size:36px;
-    margin-bottom:15px;
+    font-family:'Playfair Display', serif; /* Uses the elegant Playfair Display font */
+    font-size:36px;                  /* Sets a large font size */
+    margin-bottom:15px;              /* Adds space below the heading */
 }
 
+/* Styles the paragraph inside the left section */
 .contact-left p{
-    line-height:1.6;
+    line-height:1.6;                 /* Increases line spacing for readability */
 }
 
-/* right section */
+/* Styles the right (info) section of the contact card */
 .contact-right{
-    width:55%;
-    padding:35px 40px;
-    background:#f3efec;
+    width:55%;                       /* Takes up 55% of the card width */
+    padding:35px 40px;               /* Adds 35px top/bottom and 40px left/right space inside */
+    background:#f3efec;              /* Sets a warm off-white background */
 }
 
+/* Styles the sub-headings inside the right section */
 .contact-right h3{
-    margin-top:15px;
-    color:#333;
+    margin-top:15px;                 /* Adds space above each sub-heading */
+    color:#333;                      /* Sets a dark grey colour for the headings */
 }
 
+/* Styles the text paragraphs inside the right section */
 .contact-right p{
-    margin:5px 0 10px;
-    color:#444;
+    margin:5px 0 10px;               /* Adds small spacing above and below each paragraph */
+    color:#444;                      /* Sets a medium-dark grey colour */
 }
 
-/* button */
+/* Styles the brown "Back to Home" button in the contact card */
 .contact-btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 24px;
-    background:#8a4b08;
-    color:white;
-    text-decoration:none;
-    border-radius:25px;
-    font-size:14px;
-    transition:0.3s;
+    display:inline-block;            /* Makes the link behave like a block for padding */
+    margin-top:20px;                 /* Adds space above the button */
+    padding:10px 24px;               /* Adds 10px top/bottom and 24px left/right space inside */
+    background:#8a4b08;              /* Sets a dark brown background */
+    color:white;                     /* Makes the text white */
+    text-decoration:none;            /* Removes the underline */
+    border-radius:25px;              /* Rounds the button into a pill shape */
+    font-size:14px;                  /* Sets the font size for the button text */
+    transition:0.3s;                 /* Smoothly animates hover changes */
 }
 
+/* Styles the contact button when hovered */
 .contact-btn:hover{
-    background:#6d3a05;
+    background:#6d3a05;              /* Darkens the button background on hover */
+}
+
+/* ========= LOGIN PAGE ========= */
+
+/* Styles the login form container box */
+.login-container{
+    width: 350px;                    /* Sets a fixed width for the login box */
+    margin: 120px auto;              /* Adds 120px top/bottom space and centres it horizontally */
+    text-align: center;              /* Centres all content inside */
+    padding: 30px;                   /* Adds 30px of space inside the box */
+    background: #ffffff;             /* Sets a white background */
+    border-radius: 10px;             /* Rounds the corners of the box */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Adds a soft shadow around the box */
+}
+
+/* Styles the input fields inside the login box */
+.login-container input{
+    width: 90%;                      /* Makes each input field 90% of the container width */
+    padding: 10px;                   /* Adds comfortable space inside each input field */
+    margin: 10px 0;                  /* Adds 10px of space above and below each field */
+    border-radius: 5px;              /* Slightly rounds the corners of each input field */
+    border: 1px solid #ccc;          /* Adds a light grey border around each field */
+}
+
+/* Styles the login submit button */
+.login-container button{
+    background-color: #ff6b00;       /* Sets a bright orange background colour */
+    color: white;                    /* Makes the button text white */
+    border: none;                    /* Removes the default button border */
+    padding: 12px 20px;              /* Adds 12px top/bottom and 20px left/right space */
+    border-radius: 5px;              /* Slightly rounds the corners of the button */
+    cursor: pointer;                 /* Changes the cursor to a hand pointer on hover */
 }
