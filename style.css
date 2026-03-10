@@ -87,7 +87,7 @@ body {
 .hero {
     height: 100vh;
     /* Banner fills the full height of the screen */
-    background: url("image1/bg.jpeg") center/cover;
+    background: url("image/bg.jpeg") center/cover;
     /* Background image, centred and covering the full area */
     display: flex;
     justify-content: center;
